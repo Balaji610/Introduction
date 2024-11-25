@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Developer Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 5px 0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #34495e;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            padding: 14px 20px;
+            text-align: center;
+            display: block;
+            color: white;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 20px;
+        }
+
+        .section-title {
+            background-color: #34495e;
+            color: white;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 20px;
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+        }
+
+        /* Contact Form Styles */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1> R.BALAJI - Java Developer</h1>
+    <p>Backend Developer | Problem Solver | Code Enthusiast</p>
+</heade
+<!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <p>Below are some of the key technologies I work with:</p>
+        <ul>
+            <li>Java (Core, J2EE)</li>
+            <li>Spring Framework (Spring Boot, Spring MVC)</li>
+            <li>Hibernate & JPA</li>
+            <li>Microservices & RESTful APIs</li>
+            <li>Database Management (MySQL, PostgreSQL)</li>
+            <li>Cloud Platforms (AWS, Azure)</li>
+            <li>Agile Methodologies</li>
+        </ul>
+
+        <p><strong>Skill Proficiency:</strong></p>
+        <div class="progress-bar">
+            <span style="width: 90%; background-color: #3498db;">Java (90%)</span>
+        </div>
+        <hr>
+        <div class="progress-bar">
+            <span style="width: 80%; background-color: #2ecc71;">Spring Boot (80%)</span>
+        </div>
+        <hr>
+        <div class="progress-bar">
+            <span style="width: 75%; background-color: #f39c12;">Hibernate (75%)</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <ul>
+            <li><strong>Online Banking System:</strong> Developed a secure, scalable banking application using Spring Boot, Hibernate, and MySQL.</li>
+            <li><strong>E-Commerce Platform:</strong> Built a Java-based e-commerce platform with features like product catalog, payment integration, and order management.</li>
+            <li><strong>Task Management App:</strong> Designed a task management application to track tasks, milestones, and deadlines using Java and Angular.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required><br>
+            <input type="email" id="email" placeholder="Your Email" required><br>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea><br>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formStatus"></p>
+    </section>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 R.BALAJI - Java Developer</p>
+</footer>
+
+<script>
+// JavaScript function to handle form submission
+function submitForm(event) {
+    event.preventDefault();  // Prevent the form from submitting normally
+
+    // Get form field values
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Simple validation (you can expand this as needed)
+    if (name && email && message) {
+        document.getElementById('formStatus').textContent = 'Thank you, ' + name + '! Your message has been sent.';
+        document.getElementById('contactForm').reset();  // Clear the form
+    } else {
+        document.getElementById('formStatus').textContent = 'Please fill in all fields.';
+    }
+}
+</script>
+
+</body>
+</html>
